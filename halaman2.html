@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="halaman2dari78.css">
+</head>
+  <section class="grid-container"> 
+
+      <body>
+          <header>
+    <nav>
+          <div class="logo">LayananKami</div>
+          <a href="tugas78.html" class="button">Halaman 1</a>
+      </nav>
+    </header>
+<div class="ccc">
+    <div class="qq">
+                <div class="light" id="leftLightContainer" style="background-image:
+            url('https://bahanpengawet.com/wp-content/uploads/2018/05/warehouse-pic.jpg');">
+            <div class="rr">
+                    <img id="leftLight" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Left Light">
+                    </div>
+                    <div class="ll" >
+                    <h3 id="leftStatus">Lampu Mati</h3>
+                    <p id="leftOnTime" style="display: none;">Waktu Nyala: </p>
+                    <p id="leftOffTime" style="display: none;">Waktu Mati: </p>
+                    <button class="tombol" id="leftButton" onclick="toggleLeftLight()">Nyalakan Lampu</button>
+                    </div>
+                </div>
+                </div>
+<div class="ii">
+                <div class="light1" id="rightLightContainer" style="background-image: url('halam 2.js');">
+                    <div class="rr">
+                    <img id="rightLight" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Right Light">
+                    </div>
+                    <div class="jj">
+                    <h3 id="rightStatus">Lampu Mati</h3>
+                    <p id="rightOnTime" style="display: none;">Waktu Nyala: </p>
+                    <p id="rightOffTime" style="display: none;">Waktu Mati: </p>
+                    <div class="tengah">
+                        <button class="tombol" onclick="toggleRightLight('on')">Nyalakan Lampu</button>
+                        <button class="tombol" onclick="toggleRightLight('off')">Matikan Lampu</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            <script src="halam 2.js"></script>
+            <div class="aaa">
+        <div class="yy">
+            <script>
+                function cekKategoriUmur() {
+                    const umur = parseInt(document.getElementById("umur").value);
+                    let kategori = "";
+
+                    if (umur < 0) {
+                        kategori = "Umur tidak valid";
+                    } else if (umur <= 1) {
+                        kategori = "Bayi";
+                    } else if (umur <= 12) {
+                        kategori = "Anak-anak";
+                    } else if (umur <= 17) {
+                        kategori = "Remaja";
+                    } else if (umur <= 64) {
+                        kategori = "Dewasa";
+                    } else {
+                        kategori = "Tua";
+                    }
+
+                    document.getElementById("hasil").innerText = "Kategori umur Anda: " + kategori;
+                }
+            </script>
+            <h2>umur</h2>
+            <label for="umur">masukan umur</label>
+            <input type="number" id="umur" min="0" required>
+            <button onclick="cekKategoriUmur()">Cek Kategori</button>
+            <p id="hasil"></p>
+        </div>
+        <div class="yy">
+           <h1>Tebak Angkaku!</h1>
+           <p>Tebak angka antara 1 sampai 10</p>
+           <input type="number" id="tebakan" min="1" max="10">
+           <button onclick="cekTebakan()">Tebak</button>
+           <h2 id="tebak"></h2>
+
+           <script>
+               // Menghasilkan angka acak antara 1 sampai 100
+               const angkaRahasia = Math.floor(Math.random() * 10) + 1;
+
+               function cekTebakan() {
+                   const tebakan = parseInt(document.getElementById('tebakan').value);
+                   const hasil = document.getElementById('tebak');
+
+                   if (isNaN(tebakan)) {
+                       hasil.textContent = "Masukkan angka yang valid!";
+                   } else if (tebakan < angkaRahasia) {
+                       hasil.textContent = "SALAH";
+                   } else if (tebakan > angkaRahasia) {
+                       hasil.textContent = " SALAH, MAAF";
+                   } else {
+                       hasil.textContent = `Selamat! Anda benar. Angka rahasianya adalah ${angkaRahasia}`;
+                   }
+               }
+           </script>
+        <style>
+            /* Gaya sederhana untuk kalkulator */
+
+            input,
+            select,
+            button {
+                margin: 5px;
+                padding: 10px;
+                font-size: 16px;
+                width: calc(100% - 20px);
+            }
+
+            button {
+                background-color: orange;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+        </div>
+        <div class="yy">
+                <h2>Kalkulator Sederhana</h2>
+
+                <div class="flex">
+                    <input type="number" id="num1" placeholder="Angka pertama">
+                    <input type="number" id="num2" placeholder="Angka kedua">
+                </div>
+                <select id="operation">
+                    <option value="add">+</option>
+                    <option value="subtract">-</option>
+                    <option value="multiply">*</option>
+                    <option value="divide">/</option>
+                </select>
+
+                <button onclick="calculate()">Hitung</button>
+
+                <h3>Hasil: <span id="result">0</span></h3>
+            </div>
+        <script>
+            function calculate() {
+                const num1 = parseFloat(document.getElementById("num1").value);
+                const num2 = parseFloat(document.getElementById("num2").value);
+                const operation = document.getElementById("operation").value;
+                let result;
+
+                if (isNaN(num1) || isNaN(num2)) {
+                    result = "Masukkan angka yang valid";
+                } else {
+                    switch (operation) {
+                        case "add":
+                            result = num1 + num2;
+                            break;
+                        case "subtract":
+                            result = num1 - num2;
+                            break;
+                        case "multiply":
+                            result = num1 * num2;
+                            break;
+                        case "divide":
+                            result = num2 !== 0 ? num1 / num2 : "Tidak bisa dibagi nol";
+                            break;
+                    }
+                }
+
+                document.getElementById("result").textContent = result;
+            }
+        </script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+
+            label {
+                display: block;
+                margin-top: 10px;
+            }
+
+            input,
+            select {
+                padding: 5px;
+                margin-top: 5px;
+            }
+        </style>
+          <!-- Temperature Converter -->
+          <div class="yy">
+              <h2>Temperature Converter</h2>
+              <input type="number" id="inputTemperature" placeholder="Masukkan suhu">
+              <select id="conversionType">
+                  <option value="CtoF">Celsius to Fahrenheit</option>
+                  <option value="CtoK">Celsius to Kelvin</option>
+                  <option value="FtoC">Fahrenheit to Celsius</option>
+                  <option value="FtoK">Fahrenheit to Kelvin</option>
+                  <option value="KtoC">Kelvin to Celsius</option>
+                  <option value="KtoF">Kelvin to Fahrenheit</option>
+              </select>
+              <button onclick="convertTemperature()">Convert</button>
+              <b>
+                  <p class="Result" id="resultTemperature"></p>
+              </b>
+          </div>
+          </div>
+</body>
+
+</section>
+</html>
