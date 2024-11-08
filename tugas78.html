@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tugas78.css">
+    <script src="tugas78.js"> {
+        
+    }
+    </script>
+    </script>
+</head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">LayananKami</div>
+                <ul>
+                    <li><a href="#contactForm">Kontak</a></li>
+                    <li><a href="#dataTable">Fitur</a></li>
+                    <li><a href="#www">Cara Kerja</a></li>
+                    <li><a href="#www">Testimoni</a></li>
+                    <li><a href="#ff">Galeri</a></li>
+                    <li><a href="halaman2.html" class="button">Halaman 2</a></li>
+                </ul>
+            </nav>
+            <div class="welcome-section">
+                <h1>Selamat datang di <span>Layanan Kami</span></h1>
+                <p>Menyediakan solusi terbaik untuk kebutuhan bisnis Anda.</p>
+                <a href="#contactForm" class="cta-button">Hubungi Kami</a>
+            </div>
+        </header>
+
+        <div class="contact-section fade-in ">
+            <h2>Kontak Kami</h2>
+            <form id="contactForm">
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="status">Status</label>
+                <select id="status" name="status">
+                    <option value="Aktif">Aktif</option>
+                    <option value="Non-Aktif">Tidak Aktif</option>
+                    <option value="Menunggu">Menunggu</option>
+                </select>
+
+                <button type="button" onclick="addToTable()">Tambah ke Tabel</button>
+            </form>
+            <h2>Tabel Data</h2>
+            <table id="dataTable" class="fade-in">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <script>
+            // Fungsi untuk menampilkan tabel
+            function showTable() {
+                document.querySelector('table').style.opacity = 1;
+            }
+
+            // Menunda tampilan tabel selama 2 detik
+            setTimeout(showTable, 2000); </script>
+
+
+        <script>
+           
+            let idCounter = 1;
+            function addToTable() {
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const status = document.getElementById("status").value;
+
+                if (name && email) {
+                    const table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+                    const newRow = table.insertRow();
+
+                    newRow.innerHTML = ` 
+                    <td>${idCounter++}</td> 
+                    <td>${name}</td> 
+                    <td>${email}</td> 
+                    <td>${status}</td> 
+               `;
+                    // Reset form 
+                    document.getElementById("contactForm").reset();
+                }
+            }
+            
+        </script>
+        <div class="www fade-in " id="www">
+            <h2>Fitur Utama Kami</h2>
+            <ul>
+                <li>Fitur 1: Layanan Berkualitas Tinggi</li>
+                <li>Fitur 2: Dukungan 24/7</li>
+                <li>Fitur 3: Solusi yang Dapat Disesuaikan</li>
+                <li>Fitur 4: Harga Terjangkau</li>
+            </ul>
+            <br>
+            <h2>Cara Kerja</h2>
+            <ol>
+                <li>Langkah 1: Hubungi Kami</li>
+                <li>Langkah 2: Diskusikan Kebutuhan Anda</li>
+                <li>Langkah 3: Dapatkan Proposal</li>
+                <li>Langkah 4: Luncurkan Proyek Anda</li>
+            </ol>
+        </body>
+        <br>
+        <h1>Apa Kata Klien Kami</h1>
+    </div>
+    <div class="ff fade-in ">
+    <blockquote class="styled-blockquote">
+        "Pengalaman Kami dengan Layanan ini sangat luar biasa.Tim sangat profesional dan dapat diandalkan"
+    <div class="quote-source">-Alex Johnson</div>
+</blockquote>
+<blockquote class="styled-blockquote">
+    "Mereka melebihi harapan kami dalam segala hal.sangat merekomendasikan layanan mereka"
+    <div class="quote-source">-Sarah Wiliams</div>
+</blockquote>
+</div>
+<h1 class="ff fade-in " id="ff">Galeri Karya Kami</h1>
+<div class="ppp fade-in">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqNjOmQKWrK2YAz1N0PDMVxmqSF_Cfm715EA&s"alt="">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE3kPFxNtj8Y95-ObknQCjQeZy3qIsqAds4A&s" alt="">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLL5YFCIqV8CIfqMMLa8wpDLIdaNFwpuVlZw&s" alt="">
+<img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGWMfpte5szTeTfntuz5ri3W85H0qXulwF3g&s" alt="">
+</div>
+<p class="yy fade-in">&copy 2024 HalamanUtamakami.Semua hak dilindungi.</p>
+    </html>

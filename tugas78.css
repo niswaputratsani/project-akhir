@@ -1,0 +1,233 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+     
+} 
+ 
+/* Body styling */ 
+body { 
+    font-family: Arial, sans-serif; 
+    color: #fff; 
+  
+    background-size: cover; 
+    background-position: center; 
+    min-height: 100vh; 
+} 
+ 
+/* Navbar styling */ 
+header nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #333; 
+    padding: 15px 20px; 
+    height: 80px; 
+    position: fixed;
+    width: 100%;
+} 
+ 
+header nav .logo { 
+    font-size: 30px; 
+    font-weight: bold; 
+}
+ 
+header nav ul { 
+    list-style: none; 
+    display: flex; 
+} 
+ 
+header nav ul li { 
+    margin-left: 20px; 
+} 
+ 
+header nav ul li a { 
+    text-decoration: none; 
+    color: #fff; 
+} 
+ 
+header nav ul li .button { 
+    background-color: #FF8C42; 
+    padding: 15px 20px; 
+    border-radius: 5px; 
+    color: #fff; 
+} 
+ 
+/* Welcome section styling */ 
+.welcome-section { 
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZLWUAzdeJc4PlI6PLtLzuwP_6kNkGazrnQ&s'); 
+    background-size: cover; 
+    padding: 18%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+   
+} 
+ 
+.welcome-section h1 { 
+    font-size: 36px; 
+} 
+ 
+.welcome-section h1 span { 
+    color: #FF8C42; 
+} 
+ 
+.welcome-section p { 
+    font-size: 18px; 
+    margin-top: 10px; 
+} 
+ 
+.cta-button { 
+    background-color: #FF8C42; 
+    color: #fff; 
+    padding: 15px 20px; 
+    text-decoration: none; 
+    margin-top: 15px; 
+    border-radius: 5px; 
+} 
+ 
+/* Contact Section Styling */ 
+.contact-section { 
+    text-align: center; 
+    padding: 40px 20px; 
+    background-color: #f5f5f5; 
+    color: #333; 
+} 
+ 
+.contact-section h2 { 
+    margin-bottom: 20px; 
+    color: #333; 
+} 
+ 
+#contactForm { 
+    max-width: 500px; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+} 
+ 
+#contactForm label { 
+    margin-top: 10px; 
+    font-weight: bold; 
+    text-align: left; 
+} 
+ 
+#contactForm input,  
+#contactForm select { 
+    padding: 10px; 
+    margin-top: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    width: 100%; 
+} 
+ 
+#contactForm button { 
+    margin-top: 20px; 
+    padding: 10px; 
+    background-color: #FF8C42; 
+    border: none; 
+    border-radius: 5px; 
+    color: white; 
+    font-size: 16px; 
+    cursor: pointer; 
+} 
+ 
+/* Table Style */ 
+#dataTable { 
+    width: 100%; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    border-collapse: collapse; 
+} 
+ 
+#dataTable thead { 
+    background-color: #FF8C42; 
+    color: white; 
+} 
+ 
+#dataTable th, #dataTable td { 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    text-align: left; 
+} 
+ul li{  
+    list-style-type: disc;
+} 
+ 
+ol li{ 
+    list-style-type: decimal;
+ 
+}
+.www{
+    color: #333;
+    margin-left: 300px;
+    padding-left: 300px;
+}
+.ff{
+    color: #252525;
+    padding-left: 250px;
+    margin-left: 250px;
+}
+.styled-blockquote {
+	max-width: 550px;
+    margin:10px;
+    width: 100%;
+    padding: 40px 60px 30px 70px;
+    border-left: 5px solid #EF911C;
+    color: #252525;
+    position: relative;
+    text-align: justify;
+}
+.styled-blockquote:before {
+	font-size: 220%;
+	font-family: arial;
+	display:block;
+	position: absolute;
+}
+.styled-blockquote:before {
+	font-family: 'icomoon';
+	color: #B1A25B;
+    left: 20px;
+    line-height: 40px;
+    top: 35px;
+}
+.styled-blockquote:after {
+	content: "";
+}
+.quote-source {
+	text-align: center;
+	color: #868686;
+	font-style: italic;
+    font-size: 95%;
+	margin-top: 15px;
+}
+.ppp :hover{
+    padding: 10px;
+}
+.ppp img{
+    padding-left:20px ;
+    border-radius: 10%;
+}
+.ppp{
+    padding-left: 200px;
+}
+.yy{
+    text-align: center;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #333; 
+    padding: 15px 20px; 
+    height: 40px; 
+    width: 100%;
+}
+.fade-in { 
+        opacity: 0; 
+        transform: translateY(20px); 
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+    } 
+     
+    .show { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
